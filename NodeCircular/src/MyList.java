@@ -56,7 +56,6 @@ class MyList {
 
     void dele(int x) {
         if (isEmpty()) {
-            
             return;
         }
 
@@ -66,15 +65,11 @@ class MyList {
             } else {
                 head = head.next;
                 tail.next = head;
-            }
-            return;
+            }return;
         }
 
         Node p = head;
         Node prev = null;
-        if (isEmpty()) {
-            return;
-        }
         do {
             if (p.info == x) {
                 break;
@@ -83,10 +78,7 @@ class MyList {
             p = p.next;
         } while (p != head);
 
-        if (p == head) {
-            
-            return;
-        }
+        if (p == head) {return;}
 
         if (p == tail) {
             tail = prev;
