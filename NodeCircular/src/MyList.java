@@ -18,12 +18,12 @@ class MyList {
     void add(int x) {
         if (isEmpty()) {
             head = tail = new Node(x, null);
-            tail.next = head; // Make it circular
+            tail.next = head; //circular
         } else {
             Node q = new Node(x, null);
             tail.next = q;
             tail = q;
-            tail.next = head; // Make it circular
+            tail.next = head; //circular
         }
     }
 
@@ -84,7 +84,7 @@ class MyList {
         } while (p != head);
 
         if (p == head) {
-            // Value not found
+            
             return;
         }
 
