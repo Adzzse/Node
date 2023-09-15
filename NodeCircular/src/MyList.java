@@ -64,7 +64,6 @@ class MyList {
             if (head == tail) {
                 clear();
             } else {
-                // Move head to the next node and update tail's next
                 head = head.next;
                 tail.next = head;
             }
@@ -90,11 +89,9 @@ class MyList {
         }
 
         if (p == tail) {
-            // If the node to delete is the tail, update tail and prev's next
             tail = prev;
             prev.next = head;
         } else {
-            // Remove the node from the list
             prev.next = p.next;
         }
     }
